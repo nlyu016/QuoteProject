@@ -7,9 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Repository
+namespace DAL.Models
 {
-    using Domain;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;

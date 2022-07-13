@@ -6,6 +6,7 @@ using System.Web.Http.Dependencies;
 using Ninject;
 using Ninject.Extensions.ChildKernel;
 using Repository;
+using DAL.Models;
 
 namespace Service
 {

@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-/*using System.Data.Entity.Infrastructure;*/
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Domain;
-using Repository;
+using DAL.Models;
 
 namespace Service
 {
@@ -30,14 +29,14 @@ namespace Service
 
         // GET: api/Quote/5
         [ResponseType(typeof(Quote))]
-        public IHttpActionResult GetTask(int id)
+        public IHttpActionResult GetQuote(int id)
         {
             return Ok(quoteService.GetQuote(id));
         }
 
         // PUT: api/Quote/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutTask(int id, Quote quote)
+        public IHttpActionResult PutQuote(int id, Quote quote)
         {
             if (!ModelState.IsValid)
             {
@@ -77,18 +76,18 @@ namespace Service
             return Ok();
         }
 
-        /*        protected override void Dispose(bool disposing)
-                {
-                    if (disposing)
-                    {
-                        db.Dispose();
-                    }
-                    base.Dispose(disposing);
-                }
+        /*protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-                private bool TaskExists(int id)
-                {
-                    return db.Tasks.Count(e => e.QuoteId == id) > 0;
-                }*/
+        private bool QuoteExists(int id)
+        {
+            return db.Quotes.Count(e => e.QuoteId == id) > 0;
+        }*/
     }
 }
