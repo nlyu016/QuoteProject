@@ -28,6 +28,7 @@ namespace Service
         }
 
         // GET: api/Quote/5
+        [Authorize]
         [ResponseType(typeof(Quote))]
         public IHttpActionResult GetQuote(int id)
         {
