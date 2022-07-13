@@ -35,6 +35,7 @@ namespace Service
         }
 
         // PUT: api/Quote/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutQuote(int id, Quote quote)
         {
@@ -54,6 +55,7 @@ namespace Service
         }
 
         // POST: api/Quote
+        [Authorize]
         [ResponseType(typeof(Quote))]
         public IHttpActionResult PostQuote(Quote quote)
         {
@@ -68,6 +70,7 @@ namespace Service
         }
 
         // DELETE: api/Quote/5
+        [Authorize]
         [ResponseType(typeof(Quote))]
         public IHttpActionResult DeleteQuote(int id)
         {
