@@ -35,10 +35,10 @@ namespace Service
             quoteRepository.Update(quote);
         }
 
-        public void DeleteQuote(int id)
+        public bool DeleteQuote(int id)
         {
             Quote quote = GetQuote(id);
-            quoteRepository.Delete(quote);
+            return quoteRepository.Delete(quote);
         }
     }
 }

@@ -12,6 +12,6 @@ namespace Repository
         void Update(Quote quote);
         IEnumerable<Quote> GetAll();
         Quote Get(int id);
-        void Delete(Quote task);
+        bool Delete(Quote quote);
     }
 }

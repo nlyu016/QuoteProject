@@ -12,6 +12,6 @@ namespace Service
         Quote GetQuote(int id);
         void InsertQuote(Quote quote);
         void UpdateQuote(Quote quote);
-        void DeleteQuote(int id);
+        bool DeleteQuote(int id);
     }
 }

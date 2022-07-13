@@ -75,9 +75,15 @@ namespace Service
         [ResponseType(typeof(Quote))]
         public IHttpActionResult DeleteQuote(int id)
         {
-            quoteService.DeleteQuote(id);
+            if (quoteService.DeleteQuote(id))
+            {
+                return Ok("Deleted");
+            } else
+            {
+                return BadRequest("Quote id not found");
+            }
 
-            return Ok();
+            
         }
 
         /*protected override void Dispose(bool disposing)

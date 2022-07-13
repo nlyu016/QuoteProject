@@ -51,14 +51,15 @@ namespace Repository
             _context.SaveChanges();
         }
 
-        public void Delete(Quote quote)
+        public bool Delete(Quote quote)
         {
             if (quote == null)
             {
-                throw new ArgumentNullException("entity");
+                return false;
             }
             _context.Quotes.Remove(quote);
             _context.SaveChanges();
+            return true;
         }
     }
 }
